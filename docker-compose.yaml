@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  broker:
+    container_name: broker
+    image: ghcr.io/laendleenergy/mqtt-broker:latest
+    ports:
+      - 1883:1883
