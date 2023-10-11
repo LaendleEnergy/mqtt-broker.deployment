@@ -25,7 +25,7 @@ stages:
         dockerRegistryEndpoint: 'laendleenergy-acr'
         dockerComposeFile: '**/docker-compose.yml'
         action: 'Run services'
-        azureSubscriptionEndpoint: 'azure-LaendleEnergy-Ressourcegroup'
+        azureSubscriptionEndpoint: 'LaendleEnergy-Azure-RM'
         projectName: $(Build.Repository.Name)
         qualifyImageNames: true
         buildImages: true
