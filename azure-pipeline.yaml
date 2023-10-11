@@ -23,7 +23,7 @@ stages:
       inputs:
         containerregistrytype: 'Container Registry'
         dockerRegistryEndpoint: 'laendleenergy-acr'
-        dockerComposeFile: '**/docker-compose.yml'
+        dockerComposeFile: '**/docker-compose.yaml'
         action: 'Run services'
         azureSubscriptionEndpoint: 'LaendleEnergy-Azure-RM'
         projectName: $(Build.Repository.Name)
