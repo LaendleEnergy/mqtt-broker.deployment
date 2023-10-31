@@ -30,5 +30,5 @@ steps:
   inputs:
     sshEndpoint: '71430-33034_ssh'
     runOptions: 'commands'
-    commands: 'docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --ansi never pull && docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --ansi never up -d --no-color --force-recreate'
+    commands: 'docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --progress quiet pull && docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --progress quiet up -d --force-recreate'
     readyTimeout: '20000'
