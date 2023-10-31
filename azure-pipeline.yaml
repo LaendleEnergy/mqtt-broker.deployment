@@ -1,6 +1,7 @@
 trigger: none
 
-remoteProjectPath: /home/felix/projects/mqtt_broker
+variables:
+  remoteProjectPath: /home/felix/projects/mqtt_broker
 
 pool:
   vmImage: ubuntu-latest
