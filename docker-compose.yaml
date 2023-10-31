@@ -4,5 +4,7 @@ services:
   broker:
     container_name: broker
     image: ghcr.io/laendleenergy/eclipse_mosquitto:latest
+    volumes:
+      - ./data:/mosquitto/data
     ports:
       - 1883:1883
