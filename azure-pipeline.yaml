@@ -12,7 +12,7 @@ steps:
   inputs:
     sshEndpoint: '71430-33034_ssh'
     runOptions: 'commands'
-    commands: 'docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --progress quiet down -d'
+    commands: 'docker compose -f ${{ variables.remoteProjectPath }}/docker-compose.yaml --progress quiet down'
     readyTimeout: '20000'
 - task: CopyFilesOverSSH@0
   displayName: Copy Project to Server
