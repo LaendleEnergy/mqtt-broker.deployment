@@ -3,6 +3,6 @@ version: '3.8'
 services:
   broker:
     container_name: broker
-    image: laendleenergy.azurecr.io/mqtt-broker/eclipse_mosquitto:latest
+    image: ghcr.io/laendleenergy/eclipse_mosquitto:latest
     ports:
       - 1883:1883

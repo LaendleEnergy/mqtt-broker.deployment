@@ -10,24 +10,12 @@ stages:
   - job: compose_up
     displayName: Docker Compose Up
     steps:
-    # - task: DockerCompose@0
-    #   inputs:
-    #     containerregistrytype: 'Azure Container Registry'
-    #     dockerComposeFile: '**/docker-compose.yaml'
-    #     action: 'Run a Docker Compose command'
-    #     dockerComposeCommand: 'up'
-    #     arguments: '-d --force-recreate'
-    #     dockerHostEndpoint: '71430-33034_docker-host'
-    #     currentWorkingDirectory: '$(System.DefaultWorkingDirectory)'
     - task: DockerCompose@0
       inputs:
-        containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'laendleenergy-acr'
+        containerregistrytype: 'Azure Container Registry'
         dockerComposeFile: '**/docker-compose.yaml'
-        action: 'Run services'
-        azureSubscriptionEndpoint: 'LaendleEnergy-Azure-RM'
-        projectName: $(Build.Repository.Name)
-        qualifyImageNames: true
-        buildImages: true
-        abortOnContainerExit: true
-        detached: true
+        action: 'Run a Docker Compose command'
+        dockerComposeCommand: 'up'
+        arguments: '-d --force-recreate'
+        dockerHostEndpoint: '71430-33034_docker-host'
+        currentWorkingDirectory: '$(System.DefaultWorkingDirectory)'
