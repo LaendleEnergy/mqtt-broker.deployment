@@ -8,3 +8,9 @@ services:
       - ./data:/mosquitto/data
     ports:
       - 1884:1883
+    networks:
+      - mqtt
+
+networks:
+  mqtt:
+    name: mqtt
